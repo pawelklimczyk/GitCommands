@@ -1,0 +1,7 @@
+Pull remote branch
+git checkout --track origin/branch_to_pull
+
+Delete local and remote branch
+git push origin --delete branch_to_delete
+
+
