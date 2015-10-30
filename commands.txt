@@ -4,4 +4,5 @@ git checkout --track origin/branch_to_pull
 Delete local and remote branch
 git push origin --delete branch_to_delete
 
-
+Show remote tags
+git ls-remote --tags origin
