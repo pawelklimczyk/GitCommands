@@ -6,3 +6,6 @@ git push origin --delete branch_to_delete
 
 Show remote tags
 git ls-remote --tags origin
+
+Push new local branch to remote
+git push -u origin new_branch
