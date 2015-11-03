@@ -9,3 +9,7 @@ git ls-remote --tags origin
 
 Push new local branch to remote
 git push -u origin new_branch
+
+Show info about remote (eg. remote branches)
+git remote show origin
+
