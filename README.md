@@ -28,3 +28,12 @@ Show info about remote (eg. remote branches)
 Undo last local commit
 
 ```git reset --soft HEAD~1```
+
+Show waht will be removed
+
+```git clean -fgn```
+
+Remove untracked files and directories
+
+```git clean -fg```
+
