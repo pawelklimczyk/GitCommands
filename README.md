@@ -29,6 +29,10 @@ Undo last local commit
 
 ```git reset --soft HEAD~1```
 
+Revert remote commit(s). It will keep commits in local branch, but reset remote branch
+
+```git push -f origin last_known_good_commit:branch_name```
+
 Show waht will be removed
 
 ```git clean -fgn```
