@@ -33,7 +33,7 @@ Revert remote commit(s). It will keep commits in local branch, but reset remote 
 
 ```git push -f origin last_known_good_commit:branch_name```
 
-Show waht will be removed
+Show what will be removed
 
 ```git clean -fgn```
 
@@ -41,3 +41,7 @@ Remove untracked files and directories
 
 ```git clean -fg```
 
+Show differences between branches
+
+```git diff master..branch-x```
+```--name-status --name-only```
