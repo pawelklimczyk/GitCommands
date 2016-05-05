@@ -45,3 +45,13 @@ Show differences between branches
 
 ```git diff master..branch-x```
 ```--name-status --name-only```
+
+
+Show branch last update
+```git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'```
+
+
+Show missing commits on master
+```git log --cherry master...feature1```
+
+
