@@ -54,4 +54,11 @@ Show branch last update
 Show missing commits on master
 ```git log --cherry master...feature1```
 
+Show changes history for a file
+```git log --follow --patch .\README.md```
+
+Show commits with contain specified text in the content of commited files
+```git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always
+```git log -Stest```  #show added/removed text
+
 
