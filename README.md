@@ -52,22 +52,26 @@ Show differences between branches
 
 
 Show branch last update
+
 ```git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'```
 
 
 Show missing commits on master
+
 ```git log --cherry master...feature1```
 
 
 Show changes history for a file
+
 ```git log --follow --patch .\README.md```
 
 
 Show commits with contain specified text in the content of commited files
+
 ```git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always
 ```git log -Stest```  #show added/removed text
 
 Show commits touching lines in file (lines 10-15 in file.txt)
-```git log -L10,15:path/to/file.txt```
 
+```git log -L10,15:path/to/file.txt```
 
