@@ -29,17 +29,21 @@ Undo last local commit
 
 ```git reset --soft HEAD~1```
 
+
 Revert remote commit(s). It will keep commits in local branch, but reset remote branch
 
 ```git push -f origin last_known_good_commit:branch_name```
+
 
 Show what will be removed
 
 ```git clean -fgn```
 
+
 Remove untracked files and directories
 
 ```git clean -fg```
+
 
 Show differences between branches
 
@@ -54,11 +58,16 @@ Show branch last update
 Show missing commits on master
 ```git log --cherry master...feature1```
 
+
 Show changes history for a file
 ```git log --follow --patch .\README.md```
+
 
 Show commits with contain specified text in the content of commited files
 ```git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always
 ```git log -Stest```  #show added/removed text
+
+Show commits touching lines in file (lines 10-15 in file.txt)
+```git log -L10,15:path/to/file.txt```
 
 
