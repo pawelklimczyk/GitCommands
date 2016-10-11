@@ -75,3 +75,9 @@ Show commits touching lines in file (lines 10-15 in file.txt)
 
 ```git log -L10,15:path/to/file.txt```
 
+Tagging
+
+```git tag -a v1.1 f59a39e -m "Message details..."```
+```git push --tags origin master```
+
+
