@@ -80,4 +80,10 @@ Tagging
 ```git tag -a v1.1 f59a39e -m "Message details..."```
 ```git push --tags origin master```
 
+Fetching all remote branches (Windows!)
+
+```foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} }```
+```git fetch --all```
+```git pull --all```
+
 
