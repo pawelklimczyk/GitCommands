@@ -86,4 +86,7 @@ Fetching all remote branches (Windows!)
 ```git fetch --all```
 ```git pull --all```
 
+Show stash content
+
+```git stash show -p stash@{1}```
 
