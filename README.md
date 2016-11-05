@@ -90,3 +90,12 @@ Show stash content
 
 ```git stash show -p stash@{1}```
 
+Consider tracked file as unchanged 
+
+```git update-index --assume-unchanged file```
+
+Consider file as changed (reverse of above command)
+
+```git update-index --no-assume-unchanged file```
+
+
