@@ -77,16 +77,21 @@ Show commits touching lines in file (lines 10-15 in file.txt)
 
 Tagging
 
-```git tag -a v1.1 f59a39e -m "Message details..."```
-```git push --tags origin master```
+```
+git tag -a v1.1 f59a39e -m "Message details..."
+
+git push --tags origin master
+```
 
 Fetching all remote branches (Windows PowerShell!)
 
-```foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} }```
+```
+foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} }```
 
-```git fetch --all```
+git fetch --all
 
-```git pull --all```
+git pull --all
+```
 
 Show stash content
 
