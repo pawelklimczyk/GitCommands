@@ -80,15 +80,21 @@ Tagging
 ```git tag -a v1.1 f59a39e -m "Message details..."```
 ```git push --tags origin master```
 
-Fetching all remote branches (Windows!)
+Fetching all remote branches (Windows PowerShell!)
 
 ```foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} }```
+
 ```git fetch --all```
+
 ```git pull --all```
 
 Show stash content
 
-```git stash show -p stash@{1}```
+```
+git stash show -p stash
+
+git stash show -p stash@{1}
+```
 
 Consider tracked file as unchanged 
 
