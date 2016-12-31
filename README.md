@@ -109,4 +109,8 @@ Consider file as changed (reverse of above command)
 
 ```git update-index --no-assume-unchanged file```
 
+Skipping SSL certificate check
+
+```git config --global http.sslVerify false````
+
 
