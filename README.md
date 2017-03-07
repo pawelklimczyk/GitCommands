@@ -37,12 +37,12 @@ Revert remote commit(s). It will keep commits in local branch, but reset remote 
 
 Show what will be removed
 
-```git clean -fgn```
+```git clean -fn```
 
 
 Remove untracked files and directories
 
-```git clean -fg```
+```git clean -f```
 
 
 Show differences between branches
