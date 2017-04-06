@@ -83,6 +83,8 @@ git tag -a v1.1 f59a39e -m "Message details..."
 git push --tags origin master
 
 git tag -d v1.1
+
+git push origin :refs/tags/v1.1
 ```
 
 Fetching all remote branches (Windows PowerShell!)
