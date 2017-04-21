@@ -9,12 +9,6 @@ Delete local and remote branch
 
 ```git push origin --delete branch_to_delete```
 
-
-Show remote tags
-
-```git ls-remote --tags origin```
-
-
 Push new local branch to remote
 
 ```git push -u origin new_branch```
@@ -87,6 +81,10 @@ git tag -d v1.1
 git push origin :refs/tags/v1.1
 ```
 
+Show remote tags
+
+```git ls-remote --tags origin```
+
 Fetching all remote branches (Windows PowerShell!)
 
 ```
@@ -115,6 +113,6 @@ Consider file as changed (reverse of above command)
 
 Skipping SSL certificate check
 
-```git config --global http.sslVerify false````
+```git config --global http.sslVerify false```
 
 
