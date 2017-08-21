@@ -44,7 +44,6 @@ Show differences between branches
 ```git diff master..branch-x```
 ```--name-status --name-only```
 
-
 Show branch last update
 
 ```git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'```
@@ -58,7 +57,6 @@ Show missing commits on master
 Show changes history for a file
 
 ```git log --follow --patch .\README.md```
-
 
 Show commits with contain specified text in the content of commited files
 
@@ -74,7 +72,7 @@ Tagging
 ```
 git tag -a v1.1 f59a39e -m "Message details..."
 
-git push --tags origin master
+git push v1.1 origin
 
 git tag -d v1.1
 
