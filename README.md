@@ -1,5 +1,10 @@
 # Usefull git commands #
 
+Fetch information about remote branches
+
+```git fetch origin```
+
+
 Pull remote branch
 
 ```git checkout --track origin/branch_to_pull```
