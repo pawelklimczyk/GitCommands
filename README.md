@@ -12,9 +12,8 @@ Pull remote branch
 
 Delete local and remote branch
 
-```git push origin --delete branch_to_delete
-
-   git branch -d branch_to_delete```
+```git push origin --delete branch_to_delete```
+```git branch -d branch_to_delete```
 
 Push new local branch to remote
 
