@@ -64,6 +64,12 @@ Remove untracked files and directories
 
 ```git clean -f```
 
+## Rebasing ##
+
+Remove 'n' commits from branch
+
+```git rebase --onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name>```
+
 ## Diff ##
 
 Show differences between branches
