@@ -1,4 +1,4 @@
-# Usefull git commands #
+# Useful git commands #
 
 ## Branching ##
 
