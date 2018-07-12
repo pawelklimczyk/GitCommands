@@ -52,6 +52,9 @@ Revert remote commit(s). It will keep commits in local branch, but reset remote 
 
 ```git push -f origin last_known_good_commit:branch_name```
 
+Commit part of the file
+
+```git add <filename> -p -i```
 
 ## Cleaning ##
 
