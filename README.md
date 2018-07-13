@@ -47,7 +47,6 @@ Undo last local commit
 
 ```git reset --soft HEAD~1```
 
-
 Revert remote commit(s). It will keep commits in local branch, but reset remote branch
 
 ```git push -f origin last_known_good_commit:branch_name```
@@ -56,12 +55,23 @@ Commit part of the file
 
 ```git add <filename> -p -i```
 
+## Merging ##
+
+Merge feature branch commits as one commit in master branch
+
+```
+git checkout master
+
+git merge --squash feature-branch
+
+git commit -m ....
+```
+
 ## Cleaning ##
 
 Show what will be removed
 
 ```git clean -fn```
-
 
 Remove untracked files and directories
 
