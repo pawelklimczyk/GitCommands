@@ -128,6 +128,15 @@ Show remote tags
 
 ```git ls-remote --tags origin```
 
+
+Remove tags
+
+```
+git push origin --delete <tag>
+
+git tag -d <tag>
+```
+
 ## Stashing ## 
 
 Show stash content
