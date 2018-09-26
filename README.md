@@ -163,4 +163,14 @@ Skipping SSL certificate check
 
 ```git config --global http.sslVerify false```
 
+## Copy repository to new location ##
 
+```
+git remote rename origin old-origin
+
+git remote add origin git@gitgub.com:your-new-repo/repo.git
+
+git push -u origin --all
+
+git push -u origin --tags
+```
