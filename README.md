@@ -137,6 +137,20 @@ git push origin --delete <tag>
 git tag -d <tag>
 ```
 
+Rename tag
+
+```
+git tag new old
+
+git tag -d old
+
+git push origin :refs/tags/old
+
+git push --tags
+```
+
+```git pull --prune --tags``` #other users have to fetch the new tag
+
 ## Stashing ## 
 
 Show stash content
