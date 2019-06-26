@@ -20,6 +20,10 @@ git push origin --delete branch_to_delete
 git branch -d branch_to_delete
 ```
 
+Create branch from commit
+
+```git branch branch_name sha1_of_the_commit```
+
 Push new local branch to remote
 
 ```git push -u origin new_branch```
