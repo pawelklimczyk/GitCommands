@@ -1,185 +1,39 @@
 # Useful git commands #
 
-## Branching ##
 
-Fetch information about remote branches
-
-```git fetch origin```
-
-
-Pull remote branch
-
-```git checkout --track origin/branch_to_pull```
-
-
-Delete local and remote branch
-
-```
-git push origin --delete branch_to_delete
-
-git branch -d branch_to_delete
-```
-
-Create branch from commit
-
-```git branch branch_name sha1_of_the_commit```
-
-Push new local branch to remote
-
-```git push -u origin new_branch```
-
-
-Show info about remote (eg. remote branches)
-
-```git remote show origin```
-
-
-Fetching all remote branches (Windows PowerShell!)
-
-```
-foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} }
-
-git fetch --all # fetches remote branches 
-
-git pull --all # update local branches which track remote branches
-```
-
-Show branch last update
-
-```git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'```
-
-## Commiting ##
-
-Undo last local commit
-
-```git reset --soft HEAD~1```
-
-Revert remote commit(s). It will keep commits in local branch, but reset remote branch
-
-```git push -f origin last_known_good_commit:branch_name```
-
-Commit part of the file
-
-```git add <filename> -p -i```
-
-## Merging ##
-
-Merge feature branch commits as one commit in master branch
-
-```
-git checkout master
-
-git merge --squash feature-branch
-
-git commit -m ....
-```
-
-## Cleaning ##
-
-Show what will be removed
-
-```git clean -fn```
-
-Remove untracked files and directories
-
-```git clean -f```
-
-## Rebasing ##
-
-Remove 'n' commits from branch
-
-```git rebase --onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name>```
-
-## Diff ##
-
-Show differences between branches
-
-```git diff master..branch-x```
-```--name-status --name-only```
-
-
-Show missing commits on master
-
-```git log --cherry master...feature1```
-
-
-Show changes history for a file
-
-```git log --follow --patch .\README.md```
-
-Show commits with contain specified text in the content of commited files
-
-```git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always
-```git log -Stest```  #show added/removed text
-
-Show commits touching lines in file (lines 10-15 in file.txt)
-
-```git log -L10,15:path/to/file.txt```
-
-## Tagging ##
-
-```
-git tag -a v1.1 f59a39e -m "Message details..."
-
-git push v1.1 origin
-
-git tag -d v1.1
-
-git push origin :refs/tags/v1.1
-```
-
-Show remote tags
-
-```git ls-remote --tags origin```
-
-
-Remove tags
-
-```
-git push origin --delete <tag>
-
-git tag -d <tag>
-```
-
-Rename tag
-
-```
-git tag new old
-
-git tag -d old
-
-git push origin :refs/tags/old
-
-git push --tags
-```
-
-```git pull --prune --tags``` #other users have to fetch the new tag
-
-## Stashing ## 
-
-Show stash content
-
-```
-git stash show -p stash
-
-git stash show -p stash@{1}
-```
-
-## File tracking ##
-
-Consider tracked file as unchanged 
-
-```git update-index --assume-unchanged file```
-
-Consider file as changed (reverse of above command)
-
-```git update-index --no-assume-unchanged file```
-
-## SSL ##
-
-Skipping SSL certificate check
-
-```git config --global http.sslVerify false```
+| Command(s) | Description |
+|---|---|
+|git fetch origin|Fetch information about remote branches|
+|git checkout --track origin/branch_to_pull|Pull remote branch|
+|git push origin --delete branch_to_delete|Delete remote branch|
+|git branch -d branch_to_delete|Delete local branch|
+|git branch branch_name sha1_of_the_commit|Create branch from commit|
+|git push -u origin new_branch|Push new local branch to remote|
+|git remote show origin|Show info about remote (eg. remote branches)|
+|foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} } & git fetch --all & git pull --all |Fetching all remote branches (Windows PowerShell!)|
+|git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'|Show branch last update|
+|git reset --soft HEAD~1|Undo last local commit|
+|git push -f origin last_known_good_commit:branch_name|Revert remote commit(s). It will keep commits in local branch, but reset remote branch|
+|git add <filename> -p -i|Commit part of the file|
+|git checkout master & git merge --squash feature-branch & git commit -m xxx|Merge feature branch commits as one commit in master branch|
+|git clean -fn|Show what will be removed|
+|git clean -f|Remove untracked files and directories|
+|git rebase --onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name>|Remove 'n' commits from branch|
+|git diff master..branch-x OR --name-status --name-only|Show differences between branches|
+|git log --cherry master...feature1|Show missing commits on master|
+|git log --follow --patch .\README.md|Show changes history for a file|
+|git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always|Show commits with contain specified text in the content of commited files|
+|git log -Stest  #show added/removed text|Show commits with contain specified text in the content of commited files|
+|git log -L10,15:path/to/file.txt|Show commits touching lines in file (lines 10-15 in file.txt)|
+|git tag -a v1.1 f59a39e -m "Message details..."|Add tag|
+|git push v1.1 origin|Push tag|
+|git ls-remote --tags origin|Show remote tags|
+|git tag -d <tag>|Remove local tag|
+|git push origin --delete <tag> |Remove remote tag|
+|git stash show -p stash OR git stash show -p stash@{1}|Show stash content|
+|git update-index --assume-unchanged file|Consider tracked file as unchanged|
+|git update-index --no-assume-unchanged file|Consider file as changed (reverse of above command)|
+|git config --global http.sslVerify false|Skipping SSL certificate check|
 
 ## Copy repository to new location ##
 
