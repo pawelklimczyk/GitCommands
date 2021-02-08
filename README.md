@@ -9,6 +9,11 @@
 |git branch -d branch_to_delete|Delete local branch|
 |git branch branch_name sha1_of_the_commit|Create branch from commit|
 |git push -u origin new_branch|Push new local branch to remote|
+| git branch -m old-name new-name
+
+git push origin :old-name new-name
+
+git push origin -u new-name|Rename local and remote branch|
 |git remote show origin|Show info about remote (eg. remote branches)|
 |foreach ($r in %{git branch -r}) { %{git branch --track $r.Replace("origin/","").Trim() $r.Trim()} } & git fetch --all & git pull --all |Fetching all remote branches (Windows PowerShell!)|
 |git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'|Show branch last update|
