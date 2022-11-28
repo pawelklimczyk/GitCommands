@@ -4,6 +4,7 @@
 | Command(s) | Description |
 |---|---|
 |git fetch origin|Fetch information about remote branches|
+|git remote update origin --prune|Updates local information about remote branches|
 |git checkout --track origin/branch_to_pull|Pull remote branch|
 |git push origin --delete branch_to_delete|Delete remote branch|
 |git branch -d branch_to_delete|Delete local branch|
