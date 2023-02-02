@@ -24,6 +24,7 @@
 |git diff master..branch-x OR --name-status --name-only|Show differences between branches|
 |git log --cherry master...feature1|Show missing commits on master|
 |git log --follow --patch .\README.md|Show changes history for a file|
+|git log --grep=<pattern>|Search for <pattern> in git commit messages|
 |git log -Gtest```  #show added/removed/modified text, 'test' is consider as regexp always|Show commits with contain specified text in the content of commited files|
 |git log -Stest  #show added/removed text|Show commits with contain specified text in the content of commited files|
 |git log -L10,15:path/to/file.txt|Show commits touching lines in file (lines 10-15 in file.txt)|
