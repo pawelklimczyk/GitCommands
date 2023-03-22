@@ -34,8 +34,8 @@
 |`git ls-remote --tags origin`|Show remote tags|
 |`git tag -d <tag>`|Remove local tag|
 |`git push origin --delete <tag>`|Remove remote tag|
-|`git tag -l \| %{git tag -d $\_; git push origin --delete $\_;}`|Removel all local and remote tags in PS|
-|`git stash show -p stash OR git stash show -p stash@{1}|Show stash content`|
+|`git tag -l \| %{git tag -d $\_; git push origin --delete $\_;}`|Removel all local and remote tags. **PS Script**|
+|`git stash show -p stash OR git stash show -p stash@{1}`|Show stash content|
 |`git update-index --assume-unchanged file`|Consider tracked file as unchanged|
 |`git update-index --no-assume-unchanged file`|Consider file as changed (reverse of above command)|
 |`git config --global http.sslVerify false`|Skipping SSL certificate check|
