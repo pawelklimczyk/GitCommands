@@ -9,7 +9,7 @@
 |`git push origin --delete branch_to_delete`|Delete remote branch|
 |`git branch -d branch_to_delete`|Delete local branch|
 |`git branch branch_name sha1_of_the_commit`|Create branch from commit|
-|`git branch --list xxx*  | foreach-object { git branch -D $_.ToString().Trim() }` | Delete local branches with wildcard. **PS Script**|
+|`git branch -D (git branch --list 'xxx*').trim()` | Delete local branches with wildcard.|
 |`git push -u origin new_branch`|Push new local branch to remote|
 |`git branch -m old-name new-name; git push origin :old-name new-name; git push origin -u new-name`|Rename local and remote branch|
 |`git remote show origin`|Show info about remote (eg. remote branches)|
