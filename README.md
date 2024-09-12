@@ -19,6 +19,7 @@
 |`git push -f origin last_known_good_commit:branch_name`|Revert remote commit(s). It will keep commits in local branch, but reset remote branch|
 |`git add <filename> -p -i`|Commit part of the file|
 |`git checkout master & git merge --squash feature-branch & git commit -m xxx`|Merge feature branch commits as one commit in master branch|
+|`git merge -X theirs branch-to-merge`|Merge `branch-to-merge` with using local copy changes as preferable|
 |`git clean -fn`|Show what will be removed|
 |`git clean -f`|Remove untracked files and directories|
 |`git rebase --onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name>`|Remove 'n' commits from branch|
