@@ -41,6 +41,9 @@
 |`git update-index --assume-unchanged file`|Consider tracked file as unchanged|
 |`git update-index --no-assume-unchanged file`|Consider file as changed (reverse of above command)|
 |`git config --global http.sslVerify false`|Skipping SSL certificate check|
+|`git revert <hash>`|Revert single commit (creates new commit undoing changes)|
+|`git rev-list --parents -n 1 <hash>`|Show parents of merge commit (needed to find parent number for revert)|
+|`git revert -m 1 <hash>`|Revert merge commit, keeping mainline (parent 1) as base|
 
 ## Copy repository to new location ##
 
